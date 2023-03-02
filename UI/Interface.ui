@@ -1,0 +1,436 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1114</width>
+    <height>575</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>微软雅黑</family>
+    <weight>50</weight>
+    <bold>false</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>SSML编辑器</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>editor.png</normaloff>editor.png</iconset>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>10</y>
+      <width>451</width>
+      <height>261</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>SSML编辑</string>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>431</width>
+       <height>231</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="title">
+         <string>结构编辑</string>
+        </property>
+        <widget class="QWidget" name="horizontalLayoutWidget">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>401</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QPushButton" name="set_break">
+            <property name="statusTip">
+             <string>使用它来添加或防止语音服务以其他方式自动插入的暂停</string>
+            </property>
+            <property name="text">
+             <string>停顿</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="set_quiet">
+            <property name="statusTip">
+             <string>在两个相邻句子之间添加暂停</string>
+            </property>
+            <property name="text">
+             <string>静音</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="set_word">
+            <property name="statusTip">
+             <string>设置选中字符为词组进行连读（中文可能效果不佳）</string>
+            </property>
+            <property name="text">
+             <string>词组</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="set_sentence">
+            <property name="statusTip">
+             <string>设置选中字符为句子</string>
+            </property>
+            <property name="text">
+             <string>句子</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="set_paragraphs">
+            <property name="statusTip">
+             <string>设置选中字符为段落</string>
+            </property>
+            <property name="text">
+             <string>段落</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_2">
+        <property name="title">
+         <string>发音编辑</string>
+        </property>
+        <widget class="QWidget" name="horizontalLayoutWidget_2">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>404</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="set_phoneme">
+            <property name="statusTip">
+             <string>设置选中文本的读音（音标或拼音等）</string>
+            </property>
+            <property name="text">
+             <string>音标</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="set_sayas">
+            <property name="statusTip">
+             <string>为语音合成引擎提供有关如何朗读文本的指导</string>
+            </property>
+            <property name="text">
+             <string>读法</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="set_alias">
+            <property name="statusTip">
+             <string>设置选中文本应读出的别名属性文本值，而不是元素中包含的文本</string>
+            </property>
+            <property name="text">
+             <string>别名</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_3">
+        <property name="title">
+         <string>风格编辑</string>
+        </property>
+        <widget class="QWidget" name="horizontalLayoutWidget_3">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>406</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="set_style">
+            <property name="statusTip">
+             <string>设置选中文本声音特定的讲话风格和扮演的角色（仅支持自定义值）</string>
+            </property>
+            <property name="text">
+             <string>风格</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="set_prosody">
+            <property name="statusTip">
+             <string>用于设置选中文本的音节、调型、范围、速率和音量的变化</string>
+            </property>
+            <property name="text">
+             <string>韵律</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="set_emphasis">
+            <property name="statusTip">
+             <string>用于设置文本的单词级强调</string>
+            </property>
+            <property name="text">
+             <string>强调</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="set_audio">
+            <property name="text">
+             <string>音频</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="set_duration">
+            <property name="statusTip">
+             <string>设置选中文本的持续时间</string>
+            </property>
+            <property name="text">
+             <string>持续时间</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget_2">
+    <property name="geometry">
+     <rect>
+      <x>650</x>
+      <y>440</y>
+      <width>111</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QPushButton" name="paste_text">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="toolTip">
+        <string>仅在设置语音合成API后有效</string>
+       </property>
+       <property name="statusTip">
+        <string>将文本粘贴到文本框中</string>
+       </property>
+       <property name="text">
+        <string>粘贴文本</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="copy_text">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="statusTip">
+        <string>推荐：复制文本到相关语音生成系统中</string>
+       </property>
+       <property name="text">
+        <string>复制文本</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_4">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>290</y>
+      <width>311</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>语速</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="set_speed">
+       <property name="toolTip">
+        <string>仅在设置语音合成API后有效</string>
+       </property>
+       <property name="maximum">
+        <number>100</number>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="show_speed">
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="horizontalLayoutWidget_5">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>330</y>
+      <width>311</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_5">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="font">
+        <font>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>音调</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QSlider" name="set_tone">
+       <property name="toolTip">
+        <string>仅在设置语音合成API后有效</string>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="show_tone">
+       <property name="text">
+        <string>0%</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QTextEdit" name="Text">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>631</width>
+      <height>511</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>微软雅黑</family>
+      <underline>false</underline>
+     </font>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1114</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="title">
+     <string>文件</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="title">
+     <string>编辑</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="title">
+     <string>帮助</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menu_4">
+    <property name="title">
+     <string>关于</string>
+    </property>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_2"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_4"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
