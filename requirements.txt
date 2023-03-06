@@ -1,0 +1,4 @@
+pyqtdarktheme==1.2.1
+PySide6==6.4.0.1
+PySide6-Addons==6.4.0.1
+PySide6-Essentials==6.4.0.1
